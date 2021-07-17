@@ -1,0 +1,69 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<assert.h>
+//void my_strcpy(char *dest, char *src)
+//{
+//	while (*dest!='\0')
+//	{
+//		*dest = *src;
+//		src++;
+//		dest++;
+//	}
+//	*dest = *src;//'\0'
+//}
+//void my_strcpy(char *dest, char *src)
+//{
+//	if (dest != NULL&&src != NULL)
+//	{
+//	while (*dest++ = *src++)
+//		{
+//			;
+//		}
+//	}
+//
+//}
+
+//void my_strcpy(char *dest,const char *src)
+//char* my_strcpy(char *dest, const char *src)
+//{
+//	char*ret = dest;
+//	assert(dest !=NULL);
+//	assert(src != NULL);
+//		while (*dest++ = *src++)
+//		{
+//			;
+//		}
+//
+//}
+char* my_strcpy(char *dest, const char *src)
+{
+	char* ret = dest;
+	assert(dest != NULL);
+	assert(src != NULL);
+	//把src指向的字符串拷贝到dest指向的空间，包含‘\0’
+	while (*dest++ = *src++)
+	{
+		;
+	}
+	return ret;//返回目的地的起始地址
+}
+int main(){
+	//strcpy字符拷贝
+	char arr1[] = "###########";
+	char arr2[] = "bit";
+	printf("%s\n", my_strcpy(arr1, arr2));
+	return 0;
+}
+
+//int main(){
+//	const int num = 0;
+//	 int * const p = &num;
+//	 //*p = 20;//err const
+//	 //放在指针变量的*左边时，不能通过&p来改变num的值
+//	 //const放在指针变量的*右边时，p不能被改变
+//	 *p = 20;
+//	 int n = 100;
+//	 //p = &n;
+//	printf("%d\n", num);
+//	return 0;
+//}
