@@ -1,0 +1,55 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<Windows.h>
+//int main(){
+//	char a = 128;
+//	char b = -128;
+//	//127+1=-128
+//	printf("%u\n", a);
+//	printf("%u\n", b);
+//	//%u打印十进制的无符号数
+//	return 0;
+//}
+
+//int main(){
+//	int i = -20;
+//	unsigned int j = 10;
+//	printf("%d\n", i+j);
+//	return 0;
+//}
+//循环，unsigned是把字符变成无符号数
+//int main(){
+//	unsigned int i;
+//	for (i = 9; i >= 0; i--)
+//	{
+//		//printf("%u ", i);
+//		printf("%d ", i);
+//		Sleep(100);
+//	}
+//	return 0;
+//}
+//unsigned int i = 0;//unsigned永远小于等于255
+//int main(){
+//	for (i = 0; i <= 255; i++)
+//	{
+//		printf("hello word\n");
+//		Sleep(100);
+//	}
+//	return 0;
+//}
+
+int main(){
+	float f = 5.5;
+	//科学计数法
+	//101.1
+	//(-1)^0*1.011*2^2
+	//(-1)^S*M    *2^E
+	//S=0; 
+	//M=1.011; 
+	//E=2//2+127=129
+	//S E          M
+	//0 100 0000 1 011 0000 0000 0000 0000 0000
+	//0x40b00000//地址
+
+	return 0;
+}
