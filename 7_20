@@ -1,0 +1,92 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+//int main(){
+//	int n = 9;
+//	float *pfloat = (float *)&n;
+//	printf("%d\n", n);
+//	//9的补码0 00000000 00000000000000000001001
+//	printf("%f\n", *pfloat);
+//	*pfloat = 9.0;
+//	//1001.0
+//	//1.001*2^3
+//	//0 10000010 001000000000000000000
+//	printf("%d\n", n);//打印正数
+//	printf("%f\n", *pfloat);
+//	return 0;
+//}
+//int main(){
+//	int arr[10] = { 0 };
+//	printf("%d\n", sizeof(arr) / sizeof(arr[0]));
+//	return 0;
+//}
+
+//int main(){
+//	char arr[] = "asdf";
+//	char *pc = arr;
+//	char *p = "qqsd";//qqsa属于常量字符串
+//	printf("%s\n", arr);
+//	printf("%s\n", pc);
+//	printf("%c\n", *p);
+//	printf("%s\n", p);//%s打印遇到\0停止
+//	return 0;
+//}
+
+//int main(){
+//	char *p1 = "asd";
+//	char *p2 = "asd";
+//	if (p1 == p2)
+//	{
+//		printf("hehe\n");
+//	}
+//	else
+//		printf("haha\n");
+//	return 0;
+//}
+//指针数组用来存放指针
+//int main(){
+//	int a = 1;
+//	int b = 2;
+//	int c = 3; 
+//	int *parr[3] = { &a, &b, &c };
+//	int i = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		printf("%d ", *parr[i]);
+//	}
+//	
+//	return 0;
+//}
+
+//int main(){
+//	int arr1[] = { 1, 2, 3, 4 ,5 };
+//	int arr2[] = { 2, 3, 4, 5, 6 };
+//	int arr3[] = { 3, 4, 5, 6 ,7 };
+//	int *parr[] = { arr1, arr2, arr3 };
+//	int i = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < 5; j++)
+//		{
+//			printf("%d ", *(parr[i] + j));
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+//int main(){
+//	int arr[3] = { 1, 2, 3 };
+//	int(*p)[3] = &arr;//指针数组
+//	int i = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		printf("%d ", (*p)[i]);
+//	}
+//	return 0;
+//}
+int main(){
+	char* arr[5];
+	char* (*pa)[5] = &arr;
+	return 0;
+}
