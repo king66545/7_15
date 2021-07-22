@@ -1,0 +1,57 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+//int main(){
+//	//(*(void(*)())0)();
+//	//void(*signal(int, void(*)(int)))(int);
+//	typedef void(*tt)(int);
+
+//	tt *signal(int, tt);
+//	//signal 函数的参数有两个，第一个是int,第二个是函数指针，该函数指向的函数类型是int,返回类型是void
+//	
+//	return 0;
+//}
+
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//int main(){
+//	int(*pa)(int, int) = Add;
+//	printf("%d\n", pa(2, 3));
+//	printf("%d\n", Add(2, 3));
+//	printf("%d\n", (pa)(2, 3));
+//	printf("%d\n", (*pa)(2, 3));
+//	return 0;
+//}
+
+int Add(int x, int y)
+{
+	return x + y;
+}
+int Sub(int x, int y)
+{
+	return x - y;
+}
+int Mul(int x, int y)
+{
+	return x * y;
+}
+int Div(int x, int y)
+{
+	return x / y;
+}
+int main(){
+	int* arr[5];//需要一个数组，这个数组可以存放四个函数的地址---函数指针的数组
+	int(*pa)(int, int) = Add;//Sub Mul Div
+	int(*parr[4])(int, int) = { Add, Sub, Mul, Div };//函数指针数组
+	int i = 0;
+	int a = 0;
+	int b = 0;
+	scanf("%d%d", &a, &b);
+	for (i = 0; i < 4; i++)
+	{
+		
+		printf("%d\n", parr[i](a, b));//5 -1 6 0
+	}
+	return 0;
+}
