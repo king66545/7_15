@@ -1,0 +1,39 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+int main(){
+	//char arr[] = { "abcdef" };      
+	//printf("%d\n", sizeof(arr));       // 7
+	//printf("%d\n", sizeof(arr+0));     // 4
+	//printf("%d\n", sizeof(*arr));      // 1
+	//printf("%d\n", sizeof(arr[1]));    // 1
+	//printf("%d\n", sizeof(&arr));      // 4
+	//printf("%d\n", sizeof(&arr+1));    // 4
+	//printf("%d\n", sizeof(&arr[0]+1)); // 4
+
+
+	//printf("%d\n", strlen(arr));       //6
+	//printf("%d\n", strlen(arr + 0));   //6
+	//printf("%d\n", strlen(*arr));    error
+	//printf("%d\n", strlen(arr[1]));  error
+	//printf("%d\n", strlen(&arr));      //6
+	//printf("%d\n", strlen(&arr + 1));  //随机值
+	//printf("%d\n", strlen(&arr[0] + 1));//5
+	char *arr = "abcdef";
+	//printf("%d\n", sizeof(arr));        //4字符a的地址
+	//printf("%d\n", sizeof(arr + 0));    //4字符b的地址
+	//printf("%d\n", sizeof(*arr));       //1字符a
+	//printf("%d\n", sizeof(arr[1]));     //1字符b
+	//printf("%d\n", sizeof(&arr));       //4地址
+	//printf("%d\n", sizeof(&arr + 1));   //4
+	//printf("%d\n", sizeof(&arr[0] + 1));//4
+	//printf("%d\n", strlen(arr)); 
+	printf("%d\n", strlen(arr));//6
+	printf("%d\n", strlen(arr + 0 )); //5  
+	printf("%d\n", strlen(*arr));//err       
+	printf("%d\n", strlen(arr[1])); //err    
+	printf("%d\n", strlen(&arr));    //随机值   
+	printf("%d\n", strlen(&arr + 1));//随机值
+	printf("%d\n", strlen(&arr[0] + 1));//5
+	return 0;
+}
