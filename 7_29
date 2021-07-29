@@ -1,0 +1,81 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+//int main()
+//{
+//	char a[1000] = { 0 };
+//	int i = 0;
+//	for (i - 0; i < 1000; i++)
+//	{
+//		a[i] = -1 - i;
+//	}
+//	//-1 -2...128 127 126...3 2 1 0 
+//	printf("%d\n", strlen(a));
+//	return 0;
+//}
+
+//打印杨辉三角
+int main()
+{
+	int arr[10][10] = { 0 };
+	int i = 0;
+	int j = 0;
+	for (i = 0; i < 10; i++)
+	{
+		for (j = 0; j < 10; j++)
+		{
+			if (j == 0)
+			{
+				arr[i][j] = 1;
+			}
+			if (i == j)
+			{
+				arr[i][j] = 1;
+			}
+			if (i >= 2 && j>=1)
+			{
+				arr[i][j] = arr[i - 1][j] + arr[i - 1][j - 1];
+			}
+		}
+	}
+
+	for (i = 0; i < 10; i++)
+	{
+		int j = 0;
+		for (j = 0; j < 10 - 1 - i; j++)
+		{
+			printf(" ");
+		}
+		for (j = 0; j <=i; j++)
+		{
+			printf("%2d ", arr[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+//谁是凶手，三个人说真话，一个人说假话
+//A：不是我
+//B：是C
+//C:是D
+//D：C在胡说
+//int main()
+//{
+//	int kk = 0;
+//	for (kk = 'a'; kk <= 'd'; kk++)
+//	{
+//		if ((kk != 'a') + (kk == 'c') + (kk == 'd') + (kk != 'd') == 3)
+//		{
+//			printf("kk=%c\n", kk);
+//		}
+//	}
+//	return 0;
+//}
+//赛马问题：有36匹马，6个跑道，没有计时器，请赛马确定，36匹马中的前三名
+//请问最少比赛几次？
+//int main()
+//{
+//
+//	return 0;
+//}
