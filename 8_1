@@ -1,0 +1,96 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+#include<assert.h>
+//int main(){
+//	char arr1[15] = "abc";
+//	char arr2[] = "hello bit";
+//	strncpy(arr1, arr2, 5);//字符拷贝hello
+//	printf("%s\n", arr1);
+//	return 0;
+//}
+//int main(){
+//	char arr1[15] = "abc";
+//	char arr2[] = "hello bit";
+//	strncat(arr1, arr2, 5);//字符追加abchello
+//	printf("%s\n", arr1);
+//	return 0;
+//}
+//int main(){
+//	const char arr1[15] = "abc";
+//	const char arr2[] = "hello bit";
+//	int ret = strcmp(arr1, arr2);//字符串比较
+//	printf("%d\n", ret);
+//	return 0;
+//}
+//int main(){
+//	const char arr1[15] = "abc";
+//	const char arr2[] = "hello bit";
+//	int ret = strncmp(arr1, arr2, 3);//字符串比较，比较哪几个字符
+//	printf("%d\n", ret);
+//	return 0;
+//}
+//char* my_strstr(const char* p1, const char* p2)
+//{
+//
+//	char* s1 = p1;
+//	char* s2 = p2;
+//	char* start=p1;
+//	assert(p1 != NULL);
+//	assert(p2 != NULL);
+//	if (*p2 == '\0')
+//	{
+//		return p1;
+//	}
+//	//查找字符串
+//	while (*start)
+//	{
+//		s1 = start;
+//		s2 = p2;
+//		while ((*s1 != '\0') && (*s1 == *s2) && (*s2 != '\0'))
+//		{
+//			s1++;
+//			s2++;
+//		}
+//		if (*s2 == '\0')
+//		{
+//			return start;
+//		}
+//		if (*s1 == '\0')
+//		{
+//			return NULL;
+//		}
+//		start++;
+//	}
+//	return NULL;
+//}
+//int main(){
+//	const char arr1[15] = "abcasfsd";
+//	const char arr2[] = "sfsd";
+//	char* ret = my_strstr(arr1, arr2);
+//	//char* ret = strstr(arr1, arr2);//字符串查找
+//	if (ret == NULL)
+//		printf("子串不存在\n");
+//	else
+//		printf("%s\n", ret);
+//	return 0;
+//}
+
+int main()
+{
+	//192.168.31.121
+	//192 168 31 121
+	char arr[] = "asd@dfs.dsfwf";
+	char* p = "@.";
+	char buf[100] = { 0 };
+	strcpy(buf, arr);//字符串的拷贝
+	printf("%s\n", buf);
+	//切割buf中的字符串
+	char* ret=strtok(arr, p);
+	printf("%s\n", ret);
+	ret = strtok(NULL, p);
+	printf("%s\n", ret);
+	ret = strtok(NULL, p);
+	printf("%s\n", ret);
+	return 0;
+}
