@@ -1,0 +1,109 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<assert.h>
+//切割字符串
+//int main()
+//{
+//	char arr[] = "assad@dfasf.dsf";
+//	char* p = "@.";
+//	char buf[1023] = { 0 };
+//	strcpy(buf, arr);
+//	char* ret = NULL;
+//	//strtok是将字符串切割
+//	for (ret = strtok(arr, p); ret != NULL; ret = strtok(NULL, p))
+//	{
+//		printf("%s\n", ret);
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	char*str = strerror(0);
+//	printf("%s\n", str);
+//	return 0;
+//}
+//int main()
+//{
+//	/*char ch = 'c';
+//	int ret = islower(ch);
+//	int ret2 = isdigit(3);
+//	printf("%d\n", ret);
+//	printf("%d\n", ret2);*/
+//	char ch1 = tolower('A');//大写转小写
+//	putchar(ch1);
+//	char ch2 = toupper('a');//小写转大写
+//	putchar(ch2);
+//	return 0;
+//}
+//int main()
+//{
+//	char arr[] = "I Am Student";
+//	int i = 0;
+//	while (arr[i])
+//	{
+//		if (isupper(arr[i]))//判断换上是否为大写字母
+//		{
+//			arr[i] = tolower(arr[i]);
+//		}
+//		i++;
+//	}
+//	printf("%s\n", arr);
+//	return 0;
+//}
+
+//void* my_memcpy(void* dest, const void* src, size_t num)
+//{
+//	void* ret = dest;
+//	assert(dest != NULL);
+//	assert(src != NULL);
+//
+//	while (num--)
+//	{
+//		*(char*)dest = *(char*)src;
+//		++(char*)dest;
+//		++(char*)src;
+//	}
+//	return dest;
+//}
+//int main()
+//{
+//	int arr[] = { 1, 2, 3, 4, 5 };
+//	int arr2[20] = { 0 };
+//	int i = 0;
+//	my_memcpy(arr2, arr,sizeof(arr));
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%d", arr2[i]);
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr[] = { 1, 2, 3, 4, 5 };
+//	int arr2[20] = { 0 };
+//	int i = 0;
+//	memcpy(arr2, arr, sizeof(arr));//内存的拷贝
+//	//memmove处理重叠字符串的拷贝
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%d", arr2[i]);
+//	}
+//	return 0;
+//}
+int main()
+{
+	int arr[] = { 1, 2, 3, 4, 5 };
+	int arr2[20] = { 0 };
+	int i = 0;
+	//memcpy(arr2, arr, sizeof(arr));//内存的拷贝
+	memmove(arr+2, arr+1, 12); //处理重叠字符串的拷贝
+	for (i = 0; i < 5; i++)
+	{
+		printf("%d", arr[i]);
+	}
+	return 0;
+}
