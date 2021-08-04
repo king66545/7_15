@@ -1,0 +1,78 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+#include<stddef.h>
+//struct s3
+//{
+//	double a;
+//	char b;
+//	int i;
+//};
+//struct s4
+//{
+//	char a1;
+//	struct s3 s3;
+//	double c1;
+//};
+//int main()
+//{
+//	//内存对齐是拿空间换取时间
+//	printf("%d\n", sizeof(struct s3));
+//	printf("%d\n", sizeof(struct s4));
+//	return 0;
+//}
+//#pragma pack(4)//设置默认对齐数为4
+//struct s4
+//{
+//	char a1;
+//	double c1;
+//}; 
+//#pragma pack()//取消默认对齐数
+//int main()
+//{
+//	printf("%d\n", sizeof(struct s4));
+//	return 0;
+//}
+//struct s
+//{
+//	char c;
+//	int i;
+//	double a;
+//};
+//int main()
+//{
+//	//offsetof()//计算变量的偏移量---宏
+//	printf("%d\n", offsetof(struct s, c));
+//	printf("%d\n", offsetof(struct s, i));
+//	printf("%d\n", offsetof(struct s, a));
+//	return 0;
+//}
+//结构体传参
+struct s
+{
+	char c;
+	int i;
+	double a;
+};
+void init(struct s* ps)
+{
+	ps->c = 'w';
+	ps->i = 100;
+	ps->a = 3.14;
+}
+void print(struct s s)
+{
+	printf("%d\n", s.i);
+	printf("%c\n", s.c);
+	printf("%lf\n", s.a);
+}
+int main()
+{
+	struct s s = { 0 };
+	/*s.i = 100;
+	s.c = 'b';
+	s.a = 3.14;*/
+	init(&s);
+	print(s);
+	return 0;
+}
