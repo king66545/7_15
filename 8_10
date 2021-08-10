@@ -1,0 +1,92 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+//int main()
+//{
+//	int *p = (int*)malloc(40);// == realloc(NULL,40)
+//	if (p == NULL)
+//	{
+//		return 0;
+//	}
+//	int *p2=realloc(p, 80);
+//	if (p2 != NULL)
+//	{
+//		p = p2;
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	int *p = malloc(40);
+//	//p进行相关的判断
+//	*p = 0;//如果mallpc开辟空间失败-对NULL指针解引用
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+//void Get(char *p)
+//{
+//	p = (char*)malloc(100);
+//}
+//void test(void)
+//{
+//	char *str = NULL;
+//	Get(str);
+//	strcpy(str, "hello world");
+//	printf("%s", str);
+//	free(str);
+//	str = NULL;
+//}
+//int main()
+//{
+//	//1.运行代码会出现程序崩溃的现象
+//	//2.程序会存在内存泄漏的问题
+//	//str以值传递的形式给p
+//	//p是Get函数的形参，只在函数内部有效
+//	//等Get函数返回后，开辟的空间未释放
+//	test();
+//	return 0;
+//}
+//void Get(char **p)
+//{
+//	*p = (char*)malloc(100);
+//}
+//void test(void)
+//{
+//	char *str = NULL;
+//	Get(&str);
+//	strcpy(str, "hello world");
+//	printf("%s",str);
+//	free(str);
+//	str = NULL;
+//}
+//int main()
+//{
+//	//1.运行代码会出现程序崩溃的现象
+//	//2.程序会存在内存泄漏的问题
+//	//str以值传递的形式给p
+//	//p是Get函数的形参，只在函数内部有效
+//	//等Get函数返回后，开辟的空间未释放
+//	test();
+//	return 0;
+//}
+char* Get(char *p)
+{
+	p = (char*)malloc(100);
+	return p;
+}
+void test(void)
+{
+	char *str = NULL;
+	str=Get(&str);
+	strcpy(str, "hello world");
+	printf("%s", str);
+	free(str);
+	str = NULL;
+}
+int main()
+{
+	
+	test();
+	return 0;
+}
