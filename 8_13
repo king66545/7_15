@@ -1,0 +1,18 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	//内存的存储形式有两种一种是以ASCLL码值存储，一种是以二进制位存储
+	//int a = 1000;
+	//FILE* pf = fopen("test.txt", "wb");//创建一个名为test的文件
+	//fwrite(&a, 4, 1, pf);
+	//fclose(pf);
+	//pf = NULL;
+	while (1)
+	{
+		
+		printf("- - - -");
+	}
+	return 0;
+}
