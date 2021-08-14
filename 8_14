@@ -1,0 +1,82 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+#include<errno.h>
+//int main()
+//{
+//	//打开文件
+//	FILE* pf=fopen("test.txt", "r");//创建文件 
+//	if (pf == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//		return 0;
+//	}
+//	//打开文件
+//	//读文件 r
+//	printf("%c",fgetc(pf));
+//	//写文件 w
+//	//fputc('b', pf);
+//
+//	//关闭文件
+//	fclose(pf);
+//	pf = NULL;
+////..表示上一级路径
+//	return 0;
+//}
+//int main()
+//{
+//	int ch = fgetc(stdin);
+//	fputc(ch, stdout);
+//	return 0;
+//}
+
+//int main()
+//{
+//	char buf[1024] = { 0 };
+//	FILE* pf = fopen("test.txt", "r");//创建文件 
+//	if (pf == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//		return 0;
+//	}
+//	fgets(buf, 1024, pf);
+//	printf("%s\n", buf);
+//
+//	/*fputc('b', pf);
+//	fputc('i', pf);
+//	fputc('t', pf);*/
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+struct s
+{
+	int n;
+	float score;
+	char arr[10];
+};
+//int main()
+//{
+//	struct s s = { 5, 2.0, "asd" };
+//	FILE* pf = fopen("test.txt", "w");
+//	if (pf == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//		return 0;
+//	}
+//	////格式化的形式写文件
+//	//fprintf(pf, "%d %f %s", s.n, s.score, s.arr);
+//	//格式化的输入数据
+//	fscanf(pf,"%d %f %s", &(s.n), &(s.score), s.arr);
+//	printf("%d %f %s\n", s.n, s.score, s.arr);
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+
+int main()
+{
+	struct s s = { 0 };
+	fscanf(stdin, "%d %f %s", &(s.n), &(s.score), s.arr);//记录键盘输入的数据
+	fprintf(stdout, "%d %f %s", s.n, s.score, s.arr);//打印键盘输入的数据
+}
