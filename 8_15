@@ -1,0 +1,35 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdio.h>
+//int main()
+//{
+//	FILE* pf = fopen("test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		return 0;
+//	}
+//	//写入文件
+//	fseek(pf, -5, SEEK_END);//设置字符偏移量，定位文件指针
+//	int pos = ftell(pf);//返回文件指针相对于起始位置的偏移量
+//	rewind(pf);//让文件指针回到起始位置
+//	printf("%d\n", pos);
+//	/*int ch=fgetc(pf);
+//	printf("%c\n", ch);*/
+//	fclose(pf);
+//	
+//	pf = NULL;
+//	return 0;
+//}
+
+int main()
+{
+	FILE* pf = fopen("test.txt", "r");
+	if (pf == NULL)
+	{
+		return 0;
+	}
+
+	int ch = feof(pf);//文件结束标志
+	printf("%d\n", ch);
+
+}
