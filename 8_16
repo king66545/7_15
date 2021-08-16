@@ -1,0 +1,34 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+//#pragma pack(4)//表示4字节对齐
+//struct s
+//{
+//	int a;//0-3
+//	char b;//4
+//	short c;//6-7
+//	short d;//8-9
+//}s;
+//int main()
+//{
+//	printf("%d\n", sizeof(s));
+//	return 0;
+//}
+
+int main(){
+	int i = 0;
+	int arr[10] = { 0 };
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d ", arr[i] = i);
+	}
+	return 0;
+}
+//预处理  文本操作  E 生成test.i
+//1 #include头文件的包含，在预处理阶段就完成了
+//2 注释删除 使用空格替换注释
+//3 #difine 在预处理阶段就完成了替换
+
+//编译  把C代码翻译成汇编代码    S   生成test.s
+//1.语法分析 2.词法分析 3.语义分析 4.符号汇总
+//《程序员的自我修养》
