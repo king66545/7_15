@@ -1,0 +1,51 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>//井号开头的都是预处理指令
+//对三个数进行两次减法（从已有数据里减），实现三个数最小之和
+
+int center(int *nums)
+{
+	int x = 0;
+	if ((nums[0] > nums[1] && nums[0] < nums[2]) || (nums[0] < nums[1] && nums[0] > nums[2]))
+	{
+		x = nums[0];
+		return x;
+	}
+	if ((nums[0] < nums[1] && nums[1] < nums[2]) || (nums[0] > nums[1] && nums[1] > nums[2]))
+	{
+		x = nums[1];
+		return x;
+	}
+	else
+	{
+		x = nums[2];
+		return x;
+	}
+
+}
+int main()
+{
+	int nums[3] = { 0 };
+	int i = 0;
+	int x = 0;
+	scanf("%d %d %d", &nums[0], &nums[1], &nums[2]);
+	int ps = center(nums);
+	for (i = 0; i < 3; i++)
+	{
+		if (nums[i] >= ps)
+		{
+			nums[i] = nums[i] - ps;
+		}
+	}
+	int pp = center(&nums);
+	for (i = 0; i < 3; i++)
+	{
+		if (nums[i] >= pp)
+		{
+			nums[i] = nums[i] - pp;
+		}
+	}
+	for (i = 0; i < 3; i++)
+	{
+		printf("%d ", nums[i]);
+	}
+}
