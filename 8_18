@@ -1,0 +1,52 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#define SQUARE(x) (x)*(x)//宏
+#define DOUBLE(x) (x)+(x)//宏不能出现递归
+#define DOUBLE2(x) ((x)+(x))
+//int main()
+//{
+//	int a = 0;
+//	int ret = SQUARE(5);
+//	int ret2 = SQUARE(5+1);//5+1*5+1
+//	int ret3 = 10 * DOUBLE(5);//10*(5)+(5)
+//	int ret4 = 10 * DOUBLE2(5);//10*((5)+(5))
+//	printf("%d\n", ret);
+//	printf("%d\n", ret2);
+//	return 0;
+//}
+
+//#define PRINT(X) printf("the value of " #X " is %d\n",X)//给字符串中间的字符进行赋值
+//#define ASS(X,Y) X##Y
+//void print(int x)
+//{
+//	printf("is  = %d", x);
+//}
+//
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int Class84 = 2019;
+//	printf("%d\n", ASS(Class, 84));//Class##84 ==  Class84
+//	PRINT(a);
+//	PRINT(b);
+//	return 0;
+//}
+#define MAX(X,Y) ((X)>(Y)?(X):(Y))
+int main()
+{
+	int a = 10;
+	int b = 11;
+	int max = MAX(a++, b++);
+	//预处理阶段就完成了替换
+	//没有函数的调用和返回的开销
+	//宏无法调试
+	//而函数不同
+	//函数调用的时候
+	//会有函数调用和返回的开销
+	//int max=((a++)>(b++)?(a++):(b++));
+	printf("%d\n", max);//12
+	printf("%d\n", a);//11
+	printf("%d\n", b);//13
+	return 0;
+}
