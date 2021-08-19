@@ -1,0 +1,38 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#define ROW 3
+#define LOW 2
+int test(char **arr)
+{
+	int a = 0;
+	int b = 1;
+	while (arr[a][b] != 4)
+	{
+		if (arr[a][b] < arr[b][b])
+		{
+			return arr[a][b] < arr[b][a] ? arr[a][b] : arr[b][a];
+		}
+				
+		else
+				return arr[b][b] < arr[b][a] ? arr[b][b] : arr[b][a];
+
+	}
+	
+}
+int main()
+{
+	int arr[LOW][ROW] = { { 1, 2, 3 }, { 2, 3, 4 } };
+	int ret=test(arr);
+	if (ret == 4)
+	{
+		int min = arr[0][0] + 4;
+	}
+	else
+	{
+		a++;
+		b++;
+		ret = test(arr);
+	}
+
+	return 0;
+}
