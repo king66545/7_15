@@ -1,0 +1,65 @@
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//#include<stddef.h>
+//#define DEBUG 0
+////int main()
+////{
+////	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+////	int i = 0;
+////	for (i = 0; i < 10; i++)
+////	{
+////		arr[i] = 0;
+////#if  1//#elif #else
+////		printf("%d ", arr[i]);
+////#endif
+////	}
+////	return 0;
+////}
+//
+////int main()
+////{
+//////#if defined(DEBUG)//判断是否define定义过DEBUG,定义过执行
+////	//#ifdef DEBUG对应的
+//////	printf("hehe\n");
+//////#endif
+////#if !defined(DEBUG)//判断是否define定义过DEBUG,定义不过执行
+////	//#ifndef DEBUG
+////		printf("hehe\n");
+////#endif
+////	return 0;
+////}
+//
+//#define Offsetof(struct_name,member_name) (int)&(((struct_name*)0)->member_name)
+////实现代码偏移量
+//struct S
+//{
+//	char c1;
+//	int a;
+//	char c2;
+//};
+//int main()
+//{
+//	
+//	printf("%d\n", Offsetof(struct S, c1));
+//	printf("%d\n", Offsetof(struct S, a));
+//	printf("%d\n", Offsetof(struct S, c2));
+//	return 0;
+//}
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+
+int main()
+{
+	int n = 0;
+	int tmp = 1;
+	printf("请输入今天为第几天：");
+	scanf("%d", &n);
+	for (int i = 1; i < n; i++)
+	{
+		tmp = ((tmp + 1) * 3) / 2;
+	}
+	printf("第一天有%d个蛋糕\n", tmp);
+	return 0;
+}
